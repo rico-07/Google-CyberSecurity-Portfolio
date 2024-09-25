@@ -89,6 +89,7 @@ Est-ce que Botium Toys adhère actuellement à cette bonne pratique de conformit
 | Non | Les utilisateurs autorisés peuvent accéder à la carte de crédit du client. | Pour le moment, tous les employés y ont accès, ce qui est une mauvaise pratique dans l'entreprise. |
 | Non | La carte de crédit est stockée dans un environnement sécurisé. | Il n'est pas crypté et viole la loi et les réglementations. |
 | Non | Le cryptage est sécurisé. | Non, le cryptage n'a pas encore eu lieu. |
+| Non | Adoptez des politiques de gestion des mots de passe sécurisées. | Les politiques de mot de passe sont nominales et aucune gestion de mot de passe |
 
 * RGPD
 
@@ -96,6 +97,7 @@ Est-ce que Botium Toys adhère actuellement à cette bonne pratique de conformit
 | :--- | :---: | :--- |
 | Non | Les clients de l'UE sont protégés. | L'organisation n'applique pas les pratiques du RGPD. Ainsi, elle risque d'être condamnée à une amende par le gouvernement de l'UE. |
 | Oui | Les politiques de confidentialité sont correctement maintenues. | Selon le scénario, elles ont été appliquées par les membres de l'équipe informatique et d'autres membres du personnel. |
+| Oui | Appliquer les politiques, les procédures et les processus de confidentialité pour documenter et conserver correctement les données. | Des politiques, procédures et processus de confidentialité ont été élaborés et appliqués parmi les membres de l'équipe informatique et les autres employés, selon les besoins. |
 
 * Contrôles du système et de l'organisation
 
