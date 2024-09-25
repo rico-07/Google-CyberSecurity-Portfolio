@@ -72,10 +72,7 @@ Est-ce que Botium Toys a actuellement ce contrôle en place ?
 | Oui | Pare-feu | L'organisation dispose d'un pare-feu pour bloquer le trafic en fonction d'un ensemble de règles de sécurité définies de manière appropriée. |
 | Non | Politiques de mot de passe | La politique de mot de passe existe, mais les exigences sont considérées comme faibles et mettent en danger l'accès à la gestion des identités. |
 | Oui | Antivirus | Le logiciel antivirus est actif et régulièrement surveillé par l'équipe informatique. |
-| Non | Sauvegardes | Le service informatique doit
-disposer de sauvegardes des données critiques,
-en cas de violation, pour
-assurer la continuité des activités. |
+| Non | Sauvegardes | Le service informatique doit disposer de sauvegardes des données critiques, en cas de violation, pour assurer la continuité des activités. |
 | Non | Chiffrement | Cela protégerait la confidentialité des données. |
 | Non | IDS | Cela aiderait l'équipe informatique à identifier d'éventuelles intrusions des acteurs de la menace. |
 | Oui | Vitrine | Bien que l'équipe informatique ne soit pas responsable de la gestion de la vitrine, l'organisation doit néanmoins disposer de suffisamment de verrous. |
