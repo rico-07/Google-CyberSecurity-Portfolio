@@ -65,7 +65,7 @@ Les types de contrôle (fournissant une défense et protégeant les actifs) incl
 
 Est-ce que Botium Toys a actuellement ce contrôle en place ?
 
-| Oui / Non / ? | Contrôle | Explication |
+| Oui / Non | Contrôle | Explication |
 | :------- | :---: | :--- |
 | Non | Privilège minimal | Les employés ont accès aux données client. Cela doit être modifié pour réduire le risque de violation. |
 | Non | Plan de reprise après sinistre | À l'heure actuelle, il n'existe aucun plan de gestion des sinistres. La mise en œuvre de ce plan garantit la continuité des activités. |
@@ -84,7 +84,7 @@ Est-ce que Botium Toys adhère actuellement à cette bonne pratique de conformit
 
 * Norme de sécurité des données de l'industrie des cartes de paiement (PCI DSS)
 
-| Oui/Non /? | Bonne pratique | Explication |
+| Oui/Non | Bonne pratique | Explication |
 | :--- | :---: | :--- |
 | Non | Les utilisateurs autorisés peuvent accéder à la carte de crédit du client. | Pour le moment, tous les employés y ont accès, ce qui est une mauvaise pratique dans l'entreprise. |
 | Non | La carte de crédit est stockée dans un environnement sécurisé. | Il n'est pas crypté et viole la loi et les réglementations. |
@@ -93,7 +93,7 @@ Est-ce que Botium Toys adhère actuellement à cette bonne pratique de conformit
 
 * RGPD
 
-| Oui/Non /? | Bonnes pratiques | Explication |
+| Oui/Non | Bonnes pratiques | Explication |
 | :--- | :---: | :--- |
 | Non | Les clients de l'UE sont protégés. | L'organisation n'applique pas les pratiques du RGPD. Ainsi, elle risque d'être condamnée à une amende par le gouvernement de l'UE. |
 | Oui | Les politiques de confidentialité sont correctement maintenues. | Selon le scénario, elles ont été appliquées par les membres de l'équipe informatique et d'autres membres du personnel. |
@@ -101,7 +101,7 @@ Est-ce que Botium Toys adhère actuellement à cette bonne pratique de conformit
 
 * Contrôles du système et de l'organisation
 
-| Oui/Non /? | Bonnes pratiques | Explication |
+| Oui/Non | Bonnes pratiques | Explication |
 | :--- | :---: | :--- |
 | Non | Les politiques d'accès des utilisateurs sont établies | Les employés ont accès aux données stockées en interne, ce qui signifie que la politique d'accès n'a pas été appliquée. |
 | Oui | L'intégrité des données est cohérente, complète et exacte | L'intégrité des données est en place. |
