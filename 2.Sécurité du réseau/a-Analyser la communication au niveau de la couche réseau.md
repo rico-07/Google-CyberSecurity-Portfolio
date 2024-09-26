@@ -26,25 +26,16 @@ Maintenant que vous avez capturé des paquets de données à l'aide d'un outil d
 
 ## Fournir un résumé du problème détecté dans le journal du trafic DNS et ICMP
 
-* Le serveur DNS est en panne car le port 53 est inaccessible. Le paquet de requête ICMP indique que le paquet n'a pas été livré avec succès au port du serveur DNS. <br>
-* Comme nous le savons, le port 53 est couramment utilisé pour le DNS. Cela étant dit, le problème le plus probable est que le DNS ne répond pas et cela peut être causé par une attaque DDOS contre le serveur DNS. <br>
-* Le protocole UDP révèle que : le DNS ne répond pas. <br>
-Cela est basé sur les résultats de l'analyse du réseau, qui montrent que la réponse d'écho ICMP a renvoyé le message d'erreur : au port 53, port UDP 53 inaccessible.
-* Le port indiqué dans le message d'erreur est utilisé pour : Serveur DNS <br>
-Le problème le plus probable est : le serveur DNS ne répond pas.
+* En raison du message de réponse d'erreur ICMP concernant le port 53, il est très probable que le serveur DNS ne réponde pas. Cette hypothèse est également étayée par les indicateurs associés au message UDP sortant et à la récupération du nom de domaine. <br>
+* Dans le cadre du protocole DNS, le protocole UDP a été utilisé pour contacter le serveur DNS afin de récupérer l'adresse IP du nom de domaine de yummyrecipesforme.com. Le protocole ICMP a été utilisé pour répondre avec un message d'erreur, indiquant des problèmes de contact avec le serveur DNS. <br>
+
 
 ## Expliquez votre analyse des données et indiquez au moins une cause de l'incident
 
 | Analyse | Explication |
 | :---- | :--- |
-
-| Heure à laquelle l'incident s'est produit : 13 h 24. | Ces informations ont été obtenues à partir des horodatages du fichier journal. Dans le journal, il s'agit de la première séquence de chiffres affichée : 13:24:32.192571. Cela affiche l'heure 13:24, 32.192571 secondes, avec l'heure au format 24 heures. | <br>
-* Expliquez comment l'équipe informatique a pris connaissance de l'incident : le client a signalé à l'entreprise qu'il n'était pas en mesure d'accéder au site Web de l'entreprise. Il a ensuite été signalé que le message sur la page Web était « port inaccessible ». <br>
-* Expliquez les mesures prises par le service informatique pour enquêter sur l'incident :
-Les ingénieurs de sécurité ont consulté la page Web et ont reçu une erreur « port inaccessible ». L'équipe a utilisé TCPdump (analyseur de réseau) pour voir le trafic réseau autour du site Web. <br>
-* Notez les principales conclusions de l'enquête du service informatique (c'est-à-dire les détails relatifs au port affecté, au serveur DNS, etc.) :
-Accédez au site Web, puis chargez la page Web tout en surveillant les réseaux via TCPdump. Il a reçu beaucoup de trafic. Envoyé des paquets UDP et reçu une réponse ICMP pour retourner à l'hôte qui indique que le port 53 est inaccessible. <br>
-* Notez une cause probable de l'incident :
-Déterminez si le port 53 fonctionne ou non. SI c'est le cas, vérifiez le pare-feu. <br>
-- Pare-feu : capacité à bloquer le trafic réseau sur des ports spécifiques. Le blocage de port peut être utilisé pour arrêter ou empêcher une attaque. <br>
-- DOS : un flot d'informations peut être envoyé au périphérique réseau pour le faire planter ou l'empêcher de fonctionner. Le pirate peut désactiver le serveur DNS à l'aide d'une attaque DOS. Ou quelqu'un au sein de l'organisation peut avoir désactivé le port 53 sur les pare-feu. <br>
+| Heure à laquelle l'incident s'est produit : <br> 13 h 24. | Ces informations ont été obtenues à partir des horodatages du fichier journal. Dans le journal, il s'agit de la première séquence de chiffres affichée : 13:24:32.192571. Cela affiche l'heure 13:24, 32.192571 secondes, avec l'heure au format 24 heures. |
+| Expliquez comment l'équipe informatique a pris connaissance de l'incident : <br> Les clients ont informé l'organisation qu'ils ont reçu le message « port de destination inaccessible » lorsqu'ils ont tenté de visiter le site Web yummyrecipesforme.com. | Le scénario indique que « une poignée de clients ont contacté votre entreprise pour signaler qu'ils n'étaient pas en mesure d'accéder au site Web de l'entreprise et ont vu l'erreur « port de destination inaccessible » après avoir attendu que la page se charge. » |
+| Expliquez les mesures prises par le service informatique pour enquêter sur l'incident : <br> L'équipe de cybersécurité fournissant des services informatiques à son organisation cliente enquête actuellement sur le problème afin que les clients puissent à nouveau accéder au site Web. | Le scénario stipule que « cet incident, entre-temps, est traité par les ingénieurs de sécurité. » |
+| Notez les principales conclusions de l'enquête du service informatique : <br> Le constat est que le port DNS 53 était inaccessible après détection des parquets à l'aide de TCPDUMP. | Fournit un récapitulatif concis de ce que vous avez fait pour enquêter sur le problème. Le scénario indique : « Vous visitez le site Web et vous recevez également l'erreur « port de destination inaccessible ». Ensuite, vous chargez votre outil d'analyse de réseau, tcpdump, et chargez à nouveau la page Web. Cette fois, vous recevez un grand nombre de paquets dans votre analyseur de réseau. Dans l'analyseur, vous envoyez des paquets UDP et recevez une réponse ICMP pour retourner à l'hôte. Les résultats contiennent un message d'erreur : « port udp 53 inaccessible ». » |
+| Notez une cause probable de l'incident : <br> Le serveur DNS peut être en panne en raison d'une attaque par déni de service réussie ou d'une mauvaise configuration. | L'objectif d'une attaque DoS est d'envoyer un flot d'informations à un périphérique réseau, comme un serveur DNS, pour le faire planter ou l'empêcher de répondre au trafic réseau légitime. Il est possible qu'un attaquant ait désactivé le serveur DNS avec une attaque DoS. Il est également possible qu'un membre de l'équipe ait modifié la configuration du pare-feu et bloqué le port 53. |
