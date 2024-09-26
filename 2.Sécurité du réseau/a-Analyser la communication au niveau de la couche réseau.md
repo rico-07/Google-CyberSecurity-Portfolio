@@ -35,7 +35,9 @@ Le problème le plus probable est : le serveur DNS ne répond pas.
 
 ## Expliquez votre analyse des données et indiquez au moins une cause de l'incident
 
-| ..... | ..... |
+| Analyse | Explication |
+| :---- | :--- |
+
 | Heure à laquelle l'incident s'est produit : 13 h 24. | Ces informations ont été obtenues à partir des horodatages du fichier journal. Dans le journal, il s'agit de la première séquence de chiffres affichée : 13:24:32.192571. Cela affiche l'heure 13:24, 32.192571 secondes, avec l'heure au format 24 heures. | <br>
 * Expliquez comment l'équipe informatique a pris connaissance de l'incident : le client a signalé à l'entreprise qu'il n'était pas en mesure d'accéder au site Web de l'entreprise. Il a ensuite été signalé que le message sur la page Web était « port inaccessible ». <br>
 * Expliquez les mesures prises par le service informatique pour enquêter sur l'incident :
